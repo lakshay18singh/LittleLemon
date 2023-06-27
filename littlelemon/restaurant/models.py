@@ -7,7 +7,7 @@ class Menu(models.Model):
     Price = models.DecimalField(max_digits=5, decimal_places=2)
     Inventory = models.IntegerField(validators=[MaxValueValidator(99999), MinValueValidator(1)])
     def __str__(self):
-        return f'{self.Title} : {str(self.Price)}, {str(self.Inventory)}'
+        return f'{self.Title} : {str(self.Price)}'
 
 
 class Booking(models.Model):

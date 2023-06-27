@@ -11,6 +11,5 @@ class MenuViewTest(TestCase):
     def test_getall(self):
         obj = Menu.objects.all()
         ser = MenuSerializer(obj, many=True)
-        #print(ser.data)
         self.assertEqual(ser.data[1]['Inventory'], 23)
         
