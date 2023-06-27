@@ -3,6 +3,7 @@ Before You Check
 NOTE:
 1. Change the password of Mysql database in settings.py according to your machine.
 2. Makemigrations and migrate
+3. use pipenv shell and pipenv install to activate virtual Environment
 
 API available:
 Provide Token in Auth Token tab
