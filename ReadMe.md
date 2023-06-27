@@ -10,8 +10,6 @@ Provide Token in Auth Token tab
 2. http://127.0.0.1:8000/restaurant/menu
 3. http://127.0.0.1:8000/restaurant/menu/<int:pk>      (No trailing slash)
 4. http://127.0.0.1:8000/restaurant/booking/tables/
-
-To generate Token
-6. http://127.0.0.1:8000/restaurant/api-token-auth/    (only Post method from Insomnia)
-7. http://127.0.0.1:8000/auth/token/login/             (only Post with username, and password in form)
-8. http://127.0.0.1:8000/auth/token/logout/            (only Post with token in auth token tab)
+5. http://127.0.0.1:8000/restaurant/api-token-auth/    (only Post method from Insomnia)
+6. http://127.0.0.1:8000/auth/token/login/             (only Post with username, and password in form)
+7. http://127.0.0.1:8000/auth/token/logout/            (only Post with token in auth token tab)
