@@ -3,7 +3,7 @@ Users:
 1. username = lakshay, password = qwertyui (superuser)
 2. username = manager, password = makingproject (manager group)
 3. username = customer, password = preparingforplacement (no group)
-4. username = customer2, password=testingloginapi (no group)
+
    
 Before You Check
 NOTE:
