@@ -10,23 +10,25 @@
             
             <a href=""><img  src="{% static 'restaurant/favicon.ico' %}" width="35px" height="35px"></a>
             <div class="header-right">
-                <a class="active tag" href="" >Home</a>
-                <a href="menu/" class="tag">Menu</a>
-                <a href="booking/" class="tag">Book a Table</a>
-                <a href="logout/" class="tag">Logout</a>
+                <a class="tag" href="../register/" >Register</a>
+                <a href="" class="active tag">Login</a>
+                
             </div>
         </div>
         <div class="midContent">
             <div class="leftBlock">
                 <h1 class="">Little Lemon</h1><br>
-                <p>The fabric of Little Lemon was born out of love and respect for these humble deli creations, 
-                    met with a desire to bring quality ingredients to the table. Simply put, we’re here to 
-                    bring you a dining experience you can feel good about
-                </p>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ login_form }}
+                    <input type="submit" value="Login">
+
+                </form>
+
             </div>
             
             
-            <img src="{% static 'restaurant/img/restaurant chef C.jpg'%}" class="rightBlock" alt="Menu" >
+            <img src="{% static 'restaurant/img/mario-and-adrian.jpg'%}" class="rightBlock" alt="Menu" >
             
         </div>
         <footer>

@@ -1,0 +1,55 @@
+<htmL>
+    <head>
+        <title>Capstone Project</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'restaurant/css/index.css'%}">
+    </head>
+    <body>
+        <h1 style="text-align:center;">Welcome to Little Lemon Restaurant</h1>
+        <div class= header>
+            
+            <a href="../"><img  src="{% static 'restaurant/favicon.ico' %}" width="35px" height="35px"></a>
+            <div class="header-right">
+                <a class="active tag" href="" >Bookings</a>
+                <a class="tag" href="../" >Menu</a>
+                <a href="post/" class="tag">Add Menu Item</a>
+                <a href="delete/" class="tag">Delete Menu Item</a>
+                <a href="../logout/" class="tag">Logout</a>
+            </div>
+        </div>
+        <div class="midContent">
+            <div class="leftBlock">
+                <h1 class="">Booking List</h1>
+                {% for key, value in menu.items %}
+
+                    <h4>Name : {{value.Name}} </h4>
+                    <p class="menuDescription">No of Guest: {{ value.No_of_guests}} on {{ value.BookingDate }}</p><br>
+
+                {% endfor %}
+                <p>Page</p>
+                {% for i in numPage %}
+                    {% with "?page="|add:i as template %}
+                        <a class="paginator" href="?page={{ i }}" style="border-style: solid; border-width: 0.1vw; padding: 0.2vw; margin:0.1vw">{{ i }}</a>
+ 
+                    {% endwith %}
+                {% endfor %}
+                
+            </div>
+            
+            
+            <img src="{% static 'restaurant/img/Grill.jpg'%}" class="rightBlock" alt="Menu" >
+            
+        </div>
+            
+                
+      
+
+        <footer>
+            <div class=”footer-content”>
+                <h3 class="footer-content" >Little Lemon</h3>
+                <p class="footer-content">Created by Laksh with ♥</p>
+            </div>
+        </footer>
+        
+    </body>
+</htmL>

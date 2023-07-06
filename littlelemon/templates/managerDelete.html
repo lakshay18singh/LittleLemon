@@ -1,0 +1,52 @@
+<htmL>
+    <head>
+        <title>Capstone Project</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'restaurant/css/index.css'%}">
+    </head>
+    <body>
+        <h1 style="text-align:center;">Welcome to Little Lemon Restaurant</h1>
+        <div class= header>
+            
+            <a href="../"><img src="{% static 'restaurant/favicon.ico' %}" width="35px" height="35px"></a>
+            <div class="header-right">
+                <a class="tag" href="../booking/" >Bookings</a>
+                <a class="tag" href="../">Menu</a>
+                <a class = "tag" href="../post/" >Add Menu Item</a>
+                <a href="" class="active tag">Delete Menu Item</a>
+                <a href="../../logout/" class="tag">Logout</a>
+            </div>
+        </div>
+        <div class="midContent">
+            <div class="leftBlock">
+                <form action="" method="post" >
+                    {% csrf_token %}
+                    <label for="menuId">Enter the Id of menu Item you want to delete</label>
+                    <input type="number" id ="menuId" name="menuId">
+                    <input type="submit">
+                </form>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                
+            </div>
+            
+            <img class = "rightBlock" src="{% static 'restaurant/img/restaurant_inside.jpg' %}">
+            
+        </div>
+        
+        <footer>
+            <div class=”footer-content”>
+                <h3 class="footer-content" >Little Lemon</h3>
+                <p class="footer-content">Created by Laksh with ♥</p>
+            </div>
+        </footer>
+
+        
+        
+    </body>
+</htmL>
