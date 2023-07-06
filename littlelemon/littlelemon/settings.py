@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'restaurant',
     'rest_framework',
+    'restaurant',
     'djoser',
     'rest_framework.authtoken',
     
